@@ -1,1 +1,7 @@
 venv
+data
+obsolete
+.DS_Store
+__pycache__/
+metastore_db
+derby.log
