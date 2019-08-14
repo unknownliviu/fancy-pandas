@@ -19,14 +19,7 @@ month = Select(title='Month', value='3', options=["3", "4", "5", "6", "7", "8", 
 
 source = ColumnDataSource(data=dict(x=[], y=[]))
 
-
-TOOLTIPS=[
-    ("Location", "@name"),
-    ("Year", "@year"),
-    ("Val", "@value")
-]
-
-plot = figure(plot_height=400, plot_width=400, title="Precipitations", toolbar_location=None, tooltips=TOOLTIPS, sizing_mode="scale_both")
+plot = figure(plot_height=400, plot_width=400, title="Precipitations", toolbar_location=None, tooltips=None, sizing_mode="scale_both")
 
 def select_options():
     country_val = country.value
@@ -41,7 +34,7 @@ def select_options():
 
 def update():
     x, y = select_options()
-    source = ColumnDataSource(data=dict(x=x, y=y))
+    # source = ColumnDataSource(data=dict(x=x, y=y))
     par = np.polyfit(x, y, 1, full=True)
     slope=par[0][0]
     intercept=par[0][1]

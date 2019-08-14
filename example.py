@@ -60,8 +60,6 @@ def calculate_irrigation_req(countries):
 
     df.repartition(2).write.partitionBy('COUNTRY_CODE').parquet('data/processed', mode='append')
 
-# I've already precalculated this for "FR", "HU", "IT", "NL", "PL", "PO", "SP"
-
 def rolling_averages():
     days = lambda i: i * 86400
     df   = spark.read.load('data/processed')
