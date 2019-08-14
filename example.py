@@ -82,6 +82,6 @@ def to_csv(countries):
     for country in countries:
         temp = ra.filter(F.col('COUNTRY_CODE') == country)
         temp.persist()
-        temp.coalesce(1).write.csv('data/rolling_averages_csv/{}.csv'.format(country))
+        temp.coalesce(1).write.option("header", True).csv('data/rolling_averages_csv/{}.csv'.format(country))
 
 to_csv(some_eu_countries)
