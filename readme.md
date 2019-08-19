@@ -11,3 +11,5 @@ The data is available here https://drive.google.com/drive/folders/1eMpx5CEcynIi5
 Then look to `example.py` where I calculate the irrigation requirements for any data point, then I calculated some rolling averages for each month and exported them to CSV
 
 Finally, run `bokeh serve --show explore.py` to see some visualizations (the can be improved)
+
+additionally, there's a jupyter notebook visualisation in altair that can be used (code is also in a`ltair.py`)
