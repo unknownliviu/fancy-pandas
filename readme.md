@@ -12,4 +12,4 @@ Then look to `example.py` where I calculate the irrigation requirements for any 
 
 Finally, run `bokeh serve --show explore.py` to see some visualizations (the can be improved)
 
-additionally, there's a jupyter notebook visualisation in altair that can be used (code is also in a`ltair.py`)
+Additionally, there's a jupyter notebook visualisation in altair that can be used (code is also in a`ltair.py`)
